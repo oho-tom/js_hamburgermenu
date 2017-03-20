@@ -5,9 +5,50 @@
     <title>Menu 2</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: Verdana, sans-serif;
+            background: #eee;
+            color: #333;
+            padding: 8px;
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+        }
+        #menu {
+            position: absolute;
+            top: 0;
+            right: -180px;
+            color: #fff;
+            background: deepskyblue;
+            padding: 8px;
+            box-sizing: border-box;
+            width: 180px;
+            min-height: 100%;
+        }
+        #main.menu-open {
+            left: -180px;
+        }
+        #show, #hide{
+            float: right;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
+    <i class="fa fa-bars" id="show"></i>
+    <h1>Hello</h1>
+    <p>Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. </p>
+    <p>Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. </p>
+    <p>Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. Hello world. </p>
+
+    <div id="cover"></div>
+
     <div id="menu">
+        <i class="fa fa-times" id="hide"></i>
         <ul>
             <li>Menu</li>
             <li>Menu</li>
