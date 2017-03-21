@@ -18,7 +18,19 @@
             height: 100%;
             overflow-x: hidden;
         }
+        #cover {
+            background: #000;
+            opacity: 0.6;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            display: none;
+        }
         #menu {
+            z-index: 2;
             position: absolute;
             top: 0;
             right: -180px;
@@ -28,13 +40,20 @@
             box-sizing: border-box;
             width: 180px;
             min-height: 100%;
-        }
-        #main.menu-open {
-            left: -180px;
+            transition: 0.4s;
         }
         #show, #hide{
             float: right;
             cursor: pointer;
+        }
+        body.menu-open {
+            overflow-y: hidden;
+        }
+        body.menu-open #cover {
+            display: block;
+        }
+        body.menu-open #menu {
+            right: 0;
         }
     </style>
 </head>
@@ -57,5 +76,20 @@
             <li>Menu</li>
         </ul>
     </div>
+    <script>
+    (function(){
+        'use strict';
+
+        var show = document.getElementById("show");
+        var hide = document.getElementById("hide");
+
+        show.addEventListener('click', function(){
+            document.body.className = 'menu-open';
+        });
+        hide.addEventListener('click', function(){
+            document.body.className = '';
+        });
+    })();
+    </script>
 </body>
 </html>
